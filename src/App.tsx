@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
+import Header from './components/header/Header';
+import Form from './components/form/Form';
+import TodoList from './components/todoList/TodoList';
+import { Todo } from './type';
+import { v1 as uuid } from "uuid";
+import { useDispatch } from 'react-redux';
+import { fetchTodo } from './actions/todoActions';
 import './App.css';
 
+
+
+const todoItems: Todo[] = [
+    {
+        id: uuid(),
+        todo: "Learn React",
+        priority: 'High',
+        isComplete: false
+    },
+    {
+        id: uuid(),
+        todo: "Learn Redux-Toolkit",
+        priority: 'Normal',
+        isComplete: false
+    },
+    {
+        id: uuid(),
+        todo: "Learn Javascript",
+        priority: 'Low',
+        isComplete: true
+    }
+];
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchTodo(todoItems))
+    }, [dispatch]);
+
+
+    return (
+        <div className="App">
+            <Header />
+            <main className="main-container">
+                <Form />
+                <TodoList />
+            </main>
+        </div>
+    );
 }
 
 export default App;
