@@ -2,7 +2,7 @@
 
 <img src="./public/images/app.png" width="50%" />
 
-### [Live Site](netlify.app)
+### [Live Site](https://todos-app-hsnakk.netlify.app/)
 
 ## Introduction
 
