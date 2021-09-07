@@ -1,6 +1,6 @@
 # TODOs Application
 
-![TODOs App]('/public/images/app.png)
+<img src="./public/images/app.png" width="50%" />
 
 ### [Live Site](netlify.app)
 
@@ -10,9 +10,9 @@ This is a code repository for TODOs Application.
 
 This application was created with
 
-<img src="https://img.icons8.com/color/48/000000/react-native.png" width="40px" />
-<img src="https://img.icons8.com/color/48/000000/typescript.png" width="40px" />
-<img src="https://img.icons8.com/color/48/000000/redux.png" width="40px" />
+<a href="#" ><img src="https://img.icons8.com/color/48/000000/react-native.png" width="40px" /></a>
+<a href="#" ><img src="https://img.icons8.com/color/48/000000/typescript.png" width="40px" /></a>
+<a href="#" ><img src="https://img.icons8.com/color/48/000000/redux.png" width="40px" /></a>
 
 
 Setup:
